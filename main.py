@@ -117,8 +117,8 @@ D662A4D1 8E73AFA3 2D779D59 18D08BC8 858F4DCE F97C2A24
 
     c2 = AES.new(key2, AES.MODE_CBC, IV)
     decrypted_text = unpad(c2.decrypt(ciphertext), 16) # decrypt the ciphertext using AES CBC
-
-    print("Bob received:", decrypted_text) # print the "sent" message
+    final = decrypted_text.decode("utf-8")
+    print("Bob received:", final) # print the "sent" message
 
     return
 
